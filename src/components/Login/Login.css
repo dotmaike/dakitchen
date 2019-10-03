@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+/* BASIC */
+html {
+  background-color: #F99548;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+/* STRUCTURE */
+
+.wrapper {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.formContent {
+  align-items: center;
+  background: #fff;
+  border-radius: 10px 10px 10px 10px;
+  box-shadow: 0 30px 60px 0 rgba(0,0,0,0.3);
+  display: flex;
+  justify-content: center;
+  height: 285px;
+  width: 50%;
+}
+
+/* ANIMATIONS */
+
+/* Simple CSS3 Fade-in-down Animation */
+.fadeInDown {
+  animation-name: fadeInDown;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+}
+
+@-webkit-keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, -100%, 0);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, -100%, 0);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* Simple CSS3 Fade-in Animation */
+@-webkit-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@-moz-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+
+.fadeIn {
+  opacity:0;
+  animation:fadeIn ease-in 1;
+  animation-fill-mode:forwards;
+  animation-duration:1s;
+}
+
+.fadeIn.first {
+  animation-delay: 0.4s;
+}
+
+/* Button */
+.loginBtn {
+  box-sizing: border-box;
+  border: none;
+  border-radius: 0.2em;
+  color: #FFF;
+  font-size: 16px;
+  line-height: 34px;
+  margin: 0.2em;
+  padding: 0 15px 0 46px;
+  position: relative;
+  text-align: left;
+  white-space: nowrap;
+}
+
+.loginBtn:before {
+  content: "";
+  box-sizing: border-box;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 34px;
+}
+
+.loginBtn:focus {
+  outline: none;
+}
+
+.loginBtn:active {
+  box-shadow: inset 0 0 0 32px rgba(0,0,0,0.1);
+}
+
+/* Google */
+.loginBtn--google {
+  background: #DD4B39;
+  cursor: pointer;
+}
+
+.loginBtn--google:before {
+  background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/14082/icon_google.png') 6px 6px no-repeat;
+  border-right: #BB3F30 1px solid;
+}
+
+.loginBtn--google:hover,
+.loginBtn--google:focus {
+  background: #E74B37;
+}
