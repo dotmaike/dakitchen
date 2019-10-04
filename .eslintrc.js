@@ -27,8 +27,8 @@ module.exports = {
       order: [
         'static-methods',
         'lifecycle',
-        '/^on.+$/',
         'everything-else',
+        '/^on.+$/',
         'render'
       ]
     }],

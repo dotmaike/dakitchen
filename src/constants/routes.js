@@ -1,3 +1,3 @@
-export const LANDING = '/';
+export const LOGIN = '/';
 export const HOME = '/home';
 export const ADMIN = '/admin';

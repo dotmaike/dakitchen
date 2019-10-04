@@ -1,6 +1,7 @@
 import * as app from 'firebase/app';
 
 import 'firebase/auth';
+import 'firebase/database';
 
 const config = {
   apiKey: process.env.REACT_APP_API_KEY,
@@ -17,11 +18,13 @@ class Firebase {
   constructor() {
     app.initializeApp(config);
 
-    this.provider = new app.auth.GoogleAuthProvider();
     this.auth = app.auth();
+    this.db = app.database();
+
+    this.googleProvider = new app.auth.GoogleAuthProvider();
   }
 
-  login = () => this.auth.signInWithPopup(this.provider);
+  login = () => this.auth.signInWithPopup(this.googleProvider);
 
   logout = () => this.auth.signOut();
 
